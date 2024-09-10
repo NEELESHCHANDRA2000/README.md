@@ -1,6 +1,8 @@
 Telecom Churn Case Study
 
-Business problem overview
+Problem Statement
+
+Business Problem Overview
  
 
 In the telecom industry, customers are able to choose from multiple service providers and actively switch from one operator to another. In this highly competitive market, the telecommunications industry experiences an average of 15-25% annual churn rate. Given the fact that it costs 5-10 times more to acquire a new customer than to retain an existing one, customer retention has now become more important than customer acquisition.
@@ -16,6 +18,7 @@ In this project, you will analyse customer-level data of a leading telecom firm,
 
  
 Understanding and defining churn
+
 
 There are two main models of payment in the telecom industry - postpaid (customers pay a monthly/annual bill after using the services) and prepaid (customers pay/recharge with a certain amount in advance and then use the services).
 
@@ -33,6 +36,7 @@ This project is based on the Indian and Southeast Asian market.
 
  
 Definitions of churn
+
 
 There are various ways to define churn, such as:
 
@@ -54,6 +58,7 @@ In this project, you will use the usage-based definition to define churn.
  
 High-value churn
 
+
 In the Indian and Southeast Asian markets, approximately 80% of revenue comes from the top 20% of customers (called high-value customers). Thus, if we can reduce the churn of high-value customers, we will be able to reduce significant revenue leakage.
 
 Understanding the business objective and the data
@@ -62,8 +67,10 @@ The dataset contains customer-level information for a span of four consecutive m
 
 
 The business objective is to predict the churn in the last (i.e. the ninth) month using the data (features) from the first three months. To do this task well, understanding the typical customer behaviour during churn will be helpful.
+
  
 Understanding customer behaviour during churn
+
 
 Customers usually do not decide to switch to another competitor instantly, but rather over a period of time (this is especially applicable to high-value customers). In churn prediction, we assume that there are three phases of the customer lifecycle :
 
@@ -77,7 +84,10 @@ The ‘churn’ phase: In this phase, the customer is said to have churned. You 
 In this case, since you are working over a four-month window, the first two months are the ‘good’ phase, the third month is the ‘action’ phase, and the fourth month is the ‘churn’ phase.
 In this project, you will define high-value customers based on a certain metric (mentioned later below) and predict churn only on high-value customers.
 
+
 Data dictionary
+
+
 
 The dataset can be downloaded using this link. The data dictionary is provided for download below.
 
@@ -89,10 +99,12 @@ The attributes containing 6, 7, 8, 9 as suffixes imply that those correspond to 
  
 Data preparation
 
+
 The following data preparation steps are crucial for this problem:
 
  
 1. Filter high-value customers
+   
 
 As mentioned above, you need to predict churn only for high-value customers. Define high-value customers as follows: Those who have recharged with an amount more than or equal to X, where X is the 70th percentile of the average recharge amount in the first two months (the good phase).
 
@@ -118,6 +130,7 @@ After tagging churners, remove all the attributes corresponding to the churn pha
  
 
  Modelling
+ 
 
 Build models to predict churn. The predictive model that you’re going to build will serve two purposes:
 
