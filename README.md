@@ -1,6 +1,6 @@
-Telecom Churn Case Study -->
+# Telecom Churn Case Study -->
 
-Problem Statement
+## Problem Statement
 
 Business Problem Overview-->
  
